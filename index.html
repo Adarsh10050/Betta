@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Betta Solutions | Innovative Tech Solutions</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
+
+  <!-- External Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Your Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark">
+  <!-- Navigation -->
+  <nav class="bg-[#000000]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-24 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <div class="flex items-center" data-aos="fade-down">
+            <img src="logo 1.png" alt="Logo" class="w-[300px] h-[30px]">
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-8">
+            <a href="#home" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
+              data-aos="fade-down" data-aos-delay="100">Home</a>
+            <a href="#services" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
+              data-aos="fade-down" data-aos-delay="150">Services</a>
+            <a href="#projects" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
+              data-aos="fade-down" data-aos-delay="175">Our Projects</a>
+            <a href="#student-corner" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
+              data-aos="fade-down" data-aos-delay="200">Student Corner</a>
+            <a href="#contact" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
+              data-aos="fade-down" data-aos-delay="300">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button
+            class="mobile-menu-button p-2 rounded-md text-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu hidden md:hidden bg-lightdark shadow-lg">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#home"
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Home</a>
+      <a href="#services"
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Services</a>
+      <a href="#our-projects"
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Our
+        Projects
+      </a>
+      <a href="#student-corner"
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Student
+        Corner</a>
+      <a href="#contact"
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Contact</a>
+      <button
+        class="w-full bg-primary hover:bg-green-700 text-black px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">Get
+        Started</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-pattern py-16 md:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6" data-aos="fade-up">
+            <div class="-mt-6">
+              <span class="gradient-text typewriter">Transforming Businesses</span>
+            </div>
+            <br class="hidden md:block" />
+            With <span class="neon-text">Cutting-Edge</span> Technology
+          </h1>
+          <p class="text-gray-300 mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+            We deliver innovative digital solutions that drive growth, enhance efficiency, and create exceptional user
+            experiences for businesses of all sizes.
+          </p>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up"
+            data-aos-delay="300">
+            <button
+              class="bg-primary hover:bg-green-700 text-black px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105">
+              Explore Services
+            </button>
+            <!-- <button
+              class="border border-primary hover:bg-lightdark text-white px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center">
+              <i class="fas fa-play-circle mr-2"></i>
+              <a href="video.mp4">Video</a>
+            </button> -->
+          </div>
+        </div>
+        <div class="w-[475px] mx-auto">
+          <div class="relative mt-12" data-aos="fade-left" data-aos-delay="400">
+            <img src="main page pic.jpeg" alt="Modern workspace with developers collaborating"
+              class="rounded-xl shadow-2xl floating w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-20 bg-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-4xl font-bold mb-4 text-orange-500 text-primary font-semibold tracking-wide uppercase">What We
+          Deliver</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4 leading-tight">
+          Powerful Digital Solutions <br class="hidden md:block" />That Elevate Your Business
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+          From strategy to execution, we craft innovative solutions that help you lead and grow in a competitive digital
+          world.
+        </p>
+      </div>
+
+
+      <!-- Service Category Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div id="card-development" class="service-card" onclick="toggleService('development-services', this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Development"
+            class="w-12 h-12 mb-2 mx-auto" />
+          <h3 class="text-xl font-semibold text-center">Development</h3>
+          <p class="text-sm text-gray-400 text-center">Frontend, Backend, Fullstack</p>
+        </div>
+        <div id="card-design" class="service-card" onclick="toggleService('design-services', this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Design"
+            class="w-12 h-12 mb-2 mx-auto" />
+          <h3 class="text-xl font-semibold text-center">Design</h3>
+          <p class="text-sm text-gray-400 text-center">UI/UX, Figma, Adobe XD</p>
+        </div>
+        <div id="card-data" class="service-card" onclick="toggleService('data-services', this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Data"
+            class="w-12 h-12 mb-2 mx-auto" />
+          <h3 class="text-xl font-semibold text-center">Data</h3>
+          <p class="text-sm text-gray-400 text-center">Cleaning, Extraction, Analytics</p>
+        </div>
+        <div id="card-content" class="service-card" onclick="toggleService('content-services', this)">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Content"
+            class="w-12 h-12 mb-2 mx-auto" />
+          <h3 class="text-xl font-semibold text-center">Content</h3>
+          <p class="text-sm text-gray-400 text-center">Writing, Blogging, SEO</p>
+        </div>
+      </div>
+
+      <!-- Development Services -->
+      <div id="development-services" class="mb-12 hidden animate-fade-in">
+        <h3 class="text-2xl text-white font-semibold mb-6">Development Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">Front-End Development</h4>
+            <p>Responsive, modern UI using React, HTML, CSS, JS.</p>
+          </div>
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">Back-End Development</h4>
+            <p>Server-side logic using Node.js, Spring Boot, databases.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Services -->
+      <div id="design-services" class="mb-12 hidden animate-fade-in">
+        <h3 class="text-2xl text-white font-semibold mb-6">Design Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
+            <p>Clean, user-friendly design with Figma and Adobe XD.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Services -->
+      <div id="data-services" class="mb-12 hidden animate-fade-in">
+        <h3 class="text-2xl text-white font-semibold mb-6">Data Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">Data Cleaning</h4>
+            <p>Make your data clean, accurate, and analysis-ready.</p>
+          </div>
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">Data Extraction</h4>
+            <p>Extract structured data from websites, files, APIs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Services -->
+      <div id="content-services" class="mb-12 hidden animate-fade-in">
+        <h3 class="text-2xl text-white font-semibold mb-6">Content Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="sub-service-card">
+            <h4 class="text-xl font-bold mb-2">Content Writing</h4>
+            <p>SEO-optimized, high-quality content for websites & blogs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Projects-->
+  <section id="projects" class="py-20 bg-[#0f0f0f] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-4 text-orange-500 text-primary font-extrabold">Our Projects</h2>
+        <p class="mt-4 text-lg text-gray-300">
+          Here are some real-world projects we have built to solve problems and showcase our skills.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Project Card Template -->
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
+          <img src="https://via.placeholder.com/400x200" alt="Portfolio Website" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">Portfolio Website</h3>
+            <p class="text-gray-300 mb-4">A personal brand site to showcase your work, skills, and resume with style.
+            </p>
+            <a href="#" target="_blank"
+              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+          </div>
+        </div>
+
+        <!-- Repeat below cards and replace details -->
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
+          <img src="https://via.placeholder.com/400x200" alt="Personal Blog" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">Personal Blog</h3>
+            <p class="text-gray-300 mb-4">Share your thoughts and experiences online with a clean, easy-to-manage blog
+              platform.</p>
+            <a href="#" target="_blank"
+              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
+          <img src="https://via.placeholder.com/400x200" alt="Web Scraping Tool" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">Web Scraping Tool</h3>
+            <p class="text-gray-300 mb-4">Automate data collection from websites using tools like Python and
+              BeautifulSoup.</p>
+            <a href="#" target="_blank"
+              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
+          <img src="https://via.placeholder.com/400x200" alt="Data Visualization Project"
+            class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">Data Visualization Project</h3>
+            <p class="text-gray-300 mb-4">Interactive charts and dashboards to help visualize data and find insights.
+            </p>
+            <a href="#" target="_blank"
+              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
+          <img src="https://via.placeholder.com/400x200" alt="Online Voting System" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">Online Voting System</h3>
+            <p class="text-gray-300 mb-4">A secure voting platform with login and result calculation for institutions or
+              events.</p>
+            <a href="#" target="_blank"
+              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Student Projects Section -->
+  <section id="student-corner" class="py-20 bg-lightdark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-4xl font-bold mb-4 text-orange-500 text-primary">STUDENT CORNER</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Unlock Your Potential with Our Projects!</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          Dive into a world of innovative projects designed to enhance your skills and boost your academic journey.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Mini Project -->
+        <div
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
+          data-aos="flip-left" data-aos-delay="100">
+          <img
+            src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=612x612&w=0&k=20&c=2GLUy6eqCSr0NFRO8CHm8_PUMy9Qc8ryqcsRoe0DEYM="
+            alt="Mini Project" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h3 class="text-2xl font-bold text-white mb-2">Mini Projects</h3>
+          <p class="text-gray-300 mb-4">Short and simple projects for quick learning.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">React.js</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Next.js</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">JavaScript</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Bootstrap</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
+              onclick="toggleDetails('mini-details')">Show Projects</button>
+          </div>
+          <ul id="mini-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+            <li>Temperature Converter</li>
+            <li>Random Joke Creator</li>
+            <li>Lost and Found Website</li>
+            <li>Simple To-Do List</li>
+            <li>Basic Calculator</li>
+            <li>& More Fun & Useful Projects!</li>
+          </ul>
+        </div>
+
+        <!-- Final Year Project -->
+        <div
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
+          data-aos="flip-left" data-aos-delay="200">
+          <img
+            src="https://www.bennett.edu.in/wp-content/uploads/2024/02/Top-10-Computer-Science-Project-Ideas-in-2024-and-Beyond.jpg"
+            alt="Final Year Project" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h3 class="text-2xl font-bold text-white mb-2">Final Year Projects</h3>
+          <p class="text-gray-300 mb-4">Comprehensive projects for your final year.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Spring Boot</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Node.js</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Express.js</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">MySQL</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">MongoDB</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Admin Panel</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Testing</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
+              onclick="toggleDetails('final-details')">Show Projects</button>
+          </div>
+          <ul id="final-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+            <li>Online Voting System</li>
+            <li>Library Management System</li>
+            <li>Real-Time Chat Application</li>
+            <li>Inventory Management System</li>
+            <li>+ Your Own Amazing Ideas!</li>
+            <li>Think it. Build it. Share it.</li>
+          </ul>
+        </div>
+
+        <!-- Resume Project -->
+        <div
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
+          data-aos="flip-left" data-aos-delay="300">
+          <img src="https://edgroom-blogs.s3.ap-south-1.amazonaws.com/202310051942438001436_images.jpeg"
+            alt="Resume Project" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h3 class="text-2xl font-bold text-white mb-2">Resume Building & Career Tools</h3>
+          <p class="text-gray-300 mb-4">Projects to enhance your resume and skills.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Writing & Content Strategy</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Python</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">Data Interpretation & Analysis</span>
+            <span class="bg-green-900 text-primary text-xs px-3 py-1 rounded-full">SEO Basics</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
+              onclick="toggleDetails('resume-details')">Show Projects</button>
+          </div>
+          <ul id="resume-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+            <li>Portfolio Website</li>
+            <li>Personal Blog</li>
+            <li>Data Visualization Project</li>
+            <li>Web Scraping Tool</li>
+            <li>Custom Resume Templates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- This is INSIGHTS (BLOG)-->
+
+  <section id="insights" class="py-20 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-orange-400 text-primary">INSIGHTS</h2>
+        <p class="text-lg text-gray-300">Discover how <span class="text-orange-500 font-semibold">Betta Solutions</span>
+          helps businesses evolve through thoughtful, results-driven technology.</p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Card 1 -->
+        <div
+          class="bg-gray-900 p-6 rounded-lg transition-all duration-300 border border-transparent hover:border-orange-500">
+          <h3 class="text-xl font-bold text-orange-400 mb-3">Legacy System Transformation</h3>
+          <p class="text-gray-300">
+            A long-standing enterprise approached <span class="font-semibold text-white">Betta Solutions</span> with
+            outdated legacy systems. We implemented system modernization, performance optimizations, and
+            automation—leading to a <span class="text-orange-400 font-semibold">40% boost</span> in operational
+            efficiency and a scalable digital future.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-900 p-6 rounded-lg transition-all duration-300 border border-transparent hover:border-orange-500">
+          <h3 class="text-xl font-bold text-orange-400 mb-3">Enhanced Web User Experience</h3>
+          <p class="text-gray-300">
+            <span class="font-semibold text-white">Betta Solutions</span> crafted a sleek, engaging web experience that
+            delights users. With a focus on design simplicity and usability, customer satisfaction soared, validating
+            our design-driven development approach.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-gray-900 p-6 rounded-lg transition-all duration-300 border border-transparent hover:border-orange-500">
+          <h3 class="text-xl font-bold text-orange-400 mb-3">Efficient Cloud Migration</h3>
+          <p class="text-gray-300">
+            We strategized a cost-effective migration to the cloud. The result? <span
+              class="text-orange-500 font-semibold">60% cost savings</span>, improved reliability, and faster load
+            times—all without sacrificing performance. A scalable, future-proof solution tailored for growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <h2 class="text-4xl font-bold text-center text-orange-400 text-primary mb-4 mt-10">Contact Us</h2>
+  <section id="contact"
+    class="bg-lightdark p-8 mb-10 rounded-lg border border-gray-800 max-w-xl mx-auto mt-4 transition-all duration-300 hover:border-orange-500 hover:shadow-orange-500/40 hover:shadow-lg">
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+      <input type="hidden" name="access_key" value="707d2628-76de-4e02-9831-6fce619b64e8" />
+      <div>
+        <label for="name" class="block text-sm text-white mb-1">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-orange-500 outline-none" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm text-white mb-1">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-orange-500 outline-none" />
+      </div>
+      <div>
+        <label for="phone" class="block text-sm text-white mb-1">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required
+          class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-orange-500 outline-none" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm text-white mb-1">Message</label>
+        <textarea id="message" name="message" rows="4" required
+          class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-orange-500 outline-none"></textarea>
+      </div>
+      <button type="submit" class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Send
+        Message</button>
+    </form>
+    <p id="form-response" class="text-green-400 mt-4 hidden">Thank you! Your message has been sent.</p>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-20 bg-gradient-to-r from-primary to-green-600 text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+        <p class="text-gray-800 max-w-2xl mx-auto mb-8">
+          Whether you need a simple application or a complex enterprise solution, we're here to make your
+          vision a reality. Let's discuss how we can help you achieve your goals.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="#contact">
+            <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-8 py-4 rounded-md text-lg font-medium 
+          transition-all duration-300 transform hover:scale-110 
+          hover:bg-gradient-to-r hover:from-green-500 hover:to-orange-500 
+          hover:text-black shadow-lg hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+              Let's Build Together
+            </a>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-bold gradient-text mb-6">Betta Solutions</h3>
+          <p class="text-gray-400 mb-6">
+            Shaping the future with innovative technology solutions — since 2025.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/share/1DLpqxvCGd/"
+              class="text-gray-400 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/Betta_Solution/status/1952448068294779314?t=ZC1L8BIRAiaMR9vM6Nt3Cw&s=19"
+              class="text-gray-400 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/betta.solution?igsh=czdtbHN3Z2p4bXU1&utm_source=ig_contact_invite"
+              class="text-gray-400 hover:text-primary transition-colors duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-6">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Front-End
+                Development</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Back-End
+                Development</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">UI/UX
+                Design</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Data
+                Cleaning</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Content
+                Writing</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Data
+                Extraction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-6">Company</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+            <!-- <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Careers</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Blog</a></li> -->
+            <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-6">Contact Info</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-primary"></i>
+              <span>+91 8726280765</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-primary"></i>
+              <a href="mailto:bettasolution.dev@gmail.com"><span>bettasolution.dev@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">
+          &copy; 2025 Betta Solutions. All rights reserved.
+        </p>
+        <!-- <div class="flex space-x-6">
+          <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors duration-300">Terms of
+            Service</a>
+          <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors duration-300">Cookie Policy</a>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918726280765" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+  </a>
+
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
