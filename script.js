@@ -96,3 +96,19 @@ function toggleDetails(detailsId) {
         currentlyOpenDetailsId = null; // Reset if closing the same details
     }
 }
+
+  function toggleService(serviceId, element) {
+    // Hide all service sections
+    document.querySelectorAll("#services .mb-12").forEach(section => {
+      if (section.id !== serviceId && section.classList.contains("animate-fade-in")) {
+        section.classList.add("hidden");
+      }
+    });
+
+    // Toggle the clicked one
+    const target = document.getElementById(serviceId);
+    target.classList.toggle("hidden");
+
+  }
+
+  
