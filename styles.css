@@ -10,6 +10,13 @@ body {
   color: white;
 }
 
+@media (max-width: 640px) {
+  .typewriter {
+    white-space: normal !important;
+  }
+}
+
+
 /* =============================
    TEXT EFFECTS
 ============================= */

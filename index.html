@@ -58,58 +58,76 @@
 
 
   <!-- Mobile menu -->
-  <div class="mobile-menu hidden md:hidden bg-lightdark shadow-lg">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+  <div class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 z-50
+         bg-lightdark/95 backdrop-blur shadow-lg border-t border-white/10
+         transition-all duration-300">
+    <div class="px-4 pt-3 pb-4 space-y-1">
       <a href="#home"
-        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Home</a>
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
+        Home
+      </a>
       <a href="#services"
-        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Services</a>
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
+        Services
+      </a>
       <a href="#our-projects"
-        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Our
-        Projects
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
+        Our Projects
       </a>
       <a href="#student-corner"
-        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Student
-        Corner</a>
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
+        Student Corner
+      </a>
       <a href="#contact"
-        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">Contact</a>
+        class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
+        Contact
+      </a>
       <button
-        class="w-full bg-primary hover:bg-green-700 text-black px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">Get
-        Started</button>
+        class="w-full bg-primary hover:bg-green-700 text-black px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">
+        Get Started
+      </button>
     </div>
   </div>
 
+
+
   <!-- Hero Section -->
-  <section id="home" class="hero-pattern py-16 md:py-24 overflow-hidden">
+  <!-- Hero Section -->
+  <section id="home" class="hero-pattern py-12 md:py-20 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="relative">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6" data-aos="fade-up">
-            <div class="-mt-6">
-              <span class="gradient-text typewriter">Transforming Businesses</span>
-            </div>
-            <br class="hidden md:block" />
-            With <span class="neon-text">Cutting-Edge</span> Technology
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+        <!-- Text Content -->
+        <div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6"
+            data-aos="fade-up">
+
+            <span class="gradient-text block break-words sm:whitespace-normal">
+              Transforming Businesses
+            </span>
+            <span class="block mt-2">
+              With <span class="neon-text">Cutting-Edge</span> Technology
+            </span>
           </h1>
+
           <p class="text-gray-300 mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
             We deliver innovative digital solutions that drive growth, enhance efficiency, and create exceptional user
             experiences for businesses of all sizes.
           </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up"
-            data-aos-delay="300">
-            <button
-              class="bg-primary hover:bg-green-700 text-black px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105">
-              Explore Services
-            </button>
-            <!-- <button
-              class="border border-primary hover:bg-lightdark text-white px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center">
-              <i class="fas fa-play-circle mr-2"></i>
-              <a href="video.mp4">Video</a>
-            </button> -->
+
+          <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="#services" class="inline-block">
+              <button
+                class="bg-primary hover:bg-green-700 text-black px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105">
+                Explore Services
+              </button>
+            </a>
           </div>
         </div>
-        <div class="w-[475px] mx-auto">
-          <div class="relative mt-12" data-aos="fade-left" data-aos-delay="400">
+
+        <!-- Image -->
+        <div class="w-full max-w-[475px] mx-auto">
+          <div class="relative mt-8 md:mt-0" data-aos="fade-left" data-aos-delay="400">
             <img src="main page pic.jpeg" alt="Modern workspace with developers collaborating"
               class="rounded-xl shadow-2xl floating w-full" />
           </div>
@@ -117,6 +135,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- SERVICES SECTION -->
   <section id="services" class="py-20 bg-dark">
@@ -230,12 +249,12 @@
         <!-- Project Card Template -->
         <div
           class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="https://via.placeholder.com/400x200" alt="Portfolio Website" class="w-full h-48 object-cover">
+          <img src="ad.png" alt="Portfolio Website" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2 text-primary">Portfolio Website</h3>
             <p class="text-gray-300 mb-4">A personal brand site to showcase your work, skills, and resume with style.
             </p>
-            <a href="#" target="_blank"
+            <a href="https://adarshkumar.vercel.app/" target="_blank"
               class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
           </div>
         </div>

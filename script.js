@@ -33,82 +33,67 @@ document.querySelectorAll('.mobile-menu a').forEach(item => {
 });
 
 // --- Functions ---
+let currentlyOpenDetailsId = null;
 
 /**
- * Toggles the visibility of service details sections.
- * @param {string} id - The ID of the service detail element to show/hide.
- * @param {HTMLElement} clickedCard - The card element that was clicked.
+ * Shows the selected service details.
+ * On desktop → displays details at the bottom of the section.
+ * On mobile → moves the details block right below the clicked card.
+ * @param {string} serviceId - The ID of the service details section.
+ * @param {HTMLElement} cardElement - The clicked service card element.
  */
-function toggleService(id, clickedCard) {
-  const section = document.getElementById(id);
-  const allDetailSections = document.querySelectorAll('.service-details');
-  const allCards = document.querySelectorAll('.service-card');
+function toggleService(serviceId, cardElement) {
+  const isMobile = window.innerWidth <= 768; // Mobile breakpoint
+  const target = document.getElementById(serviceId);
 
-  // Hide all other service detail sections
-  allDetailSections.forEach(s => {
-    if (s.id !== id) {
-      s.classList.add('hidden');
-    }
-  });
+  // If clicking the same open service → just close it
+  if (currentlyOpenDetailsId === serviceId) {
+    target.classList.add("hidden");
+    cardElement.classList.remove("active-service");
+    currentlyOpenDetailsId = null;
+    return;
+  }
 
-  // Remove active class from all cards
-  allCards.forEach(card => {
-    card.classList.remove('active-service');
-  });
+  // Always close the previously open service (if any)
+  if (currentlyOpenDetailsId) {
+    const prevOpen = document.getElementById(currentlyOpenDetailsId);
+    if (prevOpen) prevOpen.classList.add("hidden");
+    document.querySelectorAll(".service-card").forEach(card => {
+      card.classList.remove("active-service");
+    });
+  }
 
-  // Toggle the clicked section and add active class to its card
-  if (section.classList.contains('hidden')) {
-    section.classList.remove('hidden');
-    clickedCard.classList.add('active-service');
+  // Show new service details in correct position
+  if (isMobile) {
+    cardElement.insertAdjacentElement("afterend", target);
   } else {
-    section.classList.add('hidden');
+    document.querySelector("#services").appendChild(target);
   }
+
+  target.classList.remove("hidden");
+  cardElement.classList.add("active-service");
+  currentlyOpenDetailsId = serviceId;
 }
 
-function toggleService(id, card) {
-  const section = document.getElementById(id);
-  const isHidden = section.classList.contains("hidden");
 
-  // Hide all service details
-  document.querySelectorAll('[id$="-services"]').forEach((el) => el.classList.add("hidden"));
-  document.querySelectorAll(".service-card").forEach((c) => c.classList.remove("active"));
+// mobile menu section 
 
-  if (isHidden) {
-    section.classList.remove("hidden");
-    card.classList.add("active");
-  }
-}
+// Mobile Menu Toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.querySelector(".mobile-menu-button"); // Your hamburger icon
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-let currentlyOpenDetailsId = null;
-function toggleDetails(detailsId) {
-    const details = document.getElementById(detailsId);
-    // Close the currently open details if it's not the same as the clicked one
-    if (currentlyOpenDetailsId && currentlyOpenDetailsId !== detailsId) {
-        const currentlyOpenDetails = document.getElementById(currentlyOpenDetailsId);
-        currentlyOpenDetails.classList.add('hidden');
-    }
-    // Toggle the clicked details
-    if (details.classList.contains('hidden')) {
-        details.classList.remove('hidden');
-        currentlyOpenDetailsId = detailsId; // Update the currently open details ID
-    } else {
-        details.classList.add('hidden');
-        currentlyOpenDetailsId = null; // Reset if closing the same details
-    }
-}
-
-  function toggleService(serviceId, element) {
-    // Hide all service sections
-    document.querySelectorAll("#services .mb-12").forEach(section => {
-      if (section.id !== serviceId && section.classList.contains("animate-fade-in")) {
-        section.classList.add("hidden");
-      }
+  if (menuButton && mobileMenu) {
+    // Toggle menu on button click
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
 
-    // Toggle the clicked one
-    const target = document.getElementById(serviceId);
-    target.classList.toggle("hidden");
-
+    // Close menu when any link is clicked
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
   }
-
-  
+});
