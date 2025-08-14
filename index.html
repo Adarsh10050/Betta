@@ -89,9 +89,6 @@
     </div>
   </div>
 
-
-
-  <!-- Hero Section -->
   <!-- Hero Section -->
   <section id="home" class="hero-pattern py-12 md:py-20 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,6 +244,47 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
 
         <!-- Project Card Template -->
+
+        <div
+          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
+
+          <img src="assests/pic_1.png" alt="The Food Hub Restaurant Website" class="w-full h-48 object-cover">
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-primary">The Food Hub</h3>
+            <p class="text-gray-300 mb-4">
+              A modern and interactive restaurant website that showcases frontend creativity with a pixel-perfect UI.
+            </p>
+
+            <!-- Hidden Details -->
+            <div id="foodHubDetails" class="hidden">
+              <p class="text-gray-300 mb-4">
+                Built entirely with clean HTML, CSS, and JavaScript, featuring custom animations, responsive layouts,
+                and
+                optimized performance for a seamless user experience.
+              </p>
+              <ul class="text-gray-400 mb-4 list-disc list-inside text-sm">
+                <li>💻 HTML, CSS, JavaScript frontend development</li>
+                <li>🎨 Smooth hover effects & animations</li>
+                <li>📱 Fully responsive on all devices</li>
+                <li>🚀 SEO-friendly & fast-loading</li>
+              </ul>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex items-center justify-between mt-4">
+              <button onclick="toggleFoodHub()"
+                class="text-orange-500 hover:text-orange-400 font-medium focus:outline-none">
+                Show More
+              </button>
+              <a href="assests/food_hub_vid.mp4" target="_blank"
+                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div
           class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
           <img src="ad.png" alt="Portfolio Website" class="w-full h-48 object-cover">
@@ -314,8 +352,9 @@
 
 
   <!-- Student Projects Section -->
-  <section id="student-corner" class="py-20 bg-lightdark">
+  <section id="student-corner" class="py-20 bg-lightdark relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
       <div class="text-center mb-16" data-aos="fade-up">
         <span class="text-4xl font-bold mb-4 text-orange-500 text-primary">STUDENT CORNER</span>
         <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Unlock Your Potential with Our Projects!</h2>
@@ -324,11 +363,12 @@
         </p>
       </div>
 
+      <!-- Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Mini Project -->
+
+        <!-- Mini Projects Card -->
         <div
-          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
-          data-aos="flip-left" data-aos-delay="100">
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover">
           <img
             src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=612x612&w=0&k=20&c=2GLUy6eqCSr0NFRO8CHm8_PUMy9Qc8ryqcsRoe0DEYM="
             alt="Mini Project" class="w-full h-48 object-cover rounded-lg mb-4" />
@@ -345,7 +385,8 @@
             <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
               onclick="toggleDetails('mini-details')">Show Projects</button>
           </div>
-          <ul id="mini-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+          <ul id="mini-details"
+            class="text-gray-300 list-disc pl-5 mt-4 hidden overflow-hidden max-h-0 transition-all duration-500">
             <li>Temperature Converter</li>
             <li>Random Joke Creator</li>
             <li>Lost and Found Website</li>
@@ -355,10 +396,9 @@
           </ul>
         </div>
 
-        <!-- Final Year Project -->
+        <!-- Final Year Projects Card -->
         <div
-          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
-          data-aos="flip-left" data-aos-delay="200">
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover">
           <img
             src="https://www.bennett.edu.in/wp-content/uploads/2024/02/Top-10-Computer-Science-Project-Ideas-in-2024-and-Beyond.jpg"
             alt="Final Year Project" class="w-full h-48 object-cover rounded-lg mb-4" />
@@ -377,7 +417,8 @@
             <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
               onclick="toggleDetails('final-details')">Show Projects</button>
           </div>
-          <ul id="final-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+          <ul id="final-details"
+            class="text-gray-300 list-disc pl-5 mt-4 hidden overflow-hidden max-h-0 transition-all duration-500">
             <li>Online Voting System</li>
             <li>Library Management System</li>
             <li>Real-Time Chat Application</li>
@@ -387,10 +428,9 @@
           </ul>
         </div>
 
-        <!-- Resume Project -->
+        <!-- Resume Projects Card -->
         <div
-          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover"
-          data-aos="flip-left" data-aos-delay="300">
+          class="bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary transition-all duration-300 card-hover">
           <img src="https://edgroom-blogs.s3.ap-south-1.amazonaws.com/202310051942438001436_images.jpeg"
             alt="Resume Project" class="w-full h-48 object-cover rounded-lg mb-4" />
           <h3 class="text-2xl font-bold text-white mb-2">Resume Building & Career Tools</h3>
@@ -405,7 +445,8 @@
             <button class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium"
               onclick="toggleDetails('resume-details')">Show Projects</button>
           </div>
-          <ul id="resume-details" class="text-gray-300 list-disc pl-5 hidden mt-4">
+          <ul id="resume-details"
+            class="text-gray-300 list-disc pl-5 mt-4 hidden overflow-hidden max-h-0 transition-all duration-500">
             <li>Portfolio Website</li>
             <li>Personal Blog</li>
             <li>Data Visualization Project</li>
@@ -413,9 +454,11 @@
             <li>Custom Resume Templates</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
+
 
 
   <!-- This is INSIGHTS (BLOG)-->
