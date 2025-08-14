@@ -18,6 +18,14 @@ AOS.init({
   once: true
 });
 
+
+// project add     ---- the food hub ----
+ function toggleFoodHub() {
+    const details = document.getElementById("foodHubDetails");
+    const button = event.target;
+    details.classList.toggle("hidden");
+    button.textContent = details.classList.contains("hidden") ? "Show More" : "Show Less";
+  }
 // --- Event Listeners ---
 
 // Mobile menu toggle
@@ -54,6 +62,7 @@ function toggleService(serviceId, cardElement) {
     return;
   }
 
+
   // Always close the previously open service (if any)
   if (currentlyOpenDetailsId) {
     const prevOpen = document.getElementById(currentlyOpenDetailsId);
@@ -62,7 +71,7 @@ function toggleService(serviceId, cardElement) {
       card.classList.remove("active-service");
     });
   }
-
+   
   // Show new service details in correct position
   if (isMobile) {
     cardElement.insertAdjacentElement("afterend", target);
@@ -97,3 +106,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function toggleDetails(id) {
+  const allLists = document.querySelectorAll('#student-corner ul'); // all lists
+  const current = document.getElementById(id);
+
+  allLists.forEach(list => {
+    if (list !== current) {
+      // Collapse other lists
+      list.style.maxHeight = null;
+      list.classList.add('hidden');
+    }
+  });
+
+  // Toggle clicked list
+  if (current.style.maxHeight) {
+    // currently open → close it
+    current.style.maxHeight = null;
+    setTimeout(() => current.classList.add('hidden'), 300);
+  } else {
+    // currently closed → open it
+    current.classList.remove('hidden');
+    current.style.maxHeight = current.scrollHeight + "px"; // smooth height
+  }
+}
