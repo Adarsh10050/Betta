@@ -26,7 +26,34 @@ AOS.init({
     details.classList.toggle("hidden");
     button.textContent = details.classList.contains("hidden") ? "Show More" : "Show Less";
   }
-// --- Event Listeners ---
+
+  // ---- portfolio ---- 
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".toggle-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      const currentDetails = this.closest(".project-card").querySelector(".details-section");
+      const isHidden = currentDetails.classList.contains("hidden");
+
+      // Hide all other detail sections
+      document.querySelectorAll(".details-section").forEach(section => {
+        section.classList.add("hidden");
+      });
+
+      // Reset all button text to "Show More"
+      buttons.forEach(btn => btn.textContent = "Show More");
+
+      // If the clicked section was hidden, show it and change button text
+      if (isHidden) {
+        currentDetails.classList.remove("hidden");
+        this.textContent = "Show Less";
+      }
+    });
+  });
+});
+
 
 // Mobile menu toggle
 document.querySelector('.mobile-menu-button').addEventListener('click', function () {
@@ -39,6 +66,9 @@ document.querySelectorAll('.mobile-menu a').forEach(item => {
     document.querySelector('.mobile-menu').classList.add('hidden');
   });
 });
+
+
+
 
 // --- Functions ---
 let currentlyOpenDetailsId = null;
@@ -130,3 +160,26 @@ function toggleDetails(id) {
     current.style.maxHeight = current.scrollHeight + "px"; // smooth height
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btn  = document.querySelector('.mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+
+    function toggleMenu() {
+      const willHide = !menu.classList.contains('hidden'); // currently open?
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', willHide ? 'false' : 'true');
+      document.body.classList.toggle('overflow-hidden', !willHide); // lock scroll when open
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    // Optional: close menu when clicking a link or pressing Esc
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      if (!menu.classList.contains('hidden')) toggleMenu();
+    }));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) toggleMenu();
+    });
+  });

@@ -7,7 +7,7 @@
   <title>Betta Solutions | Innovative Tech Solutions</title>
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon-32x32.png">
   <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
 
   <!-- External Libraries -->
@@ -17,18 +17,23 @@
 
   <!-- Your Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
 <body class="bg-dark">
   <!-- Navigation -->
-  <nav class="bg-[#000000]">
+  <nav class="bg-[#000000] fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-24 items-center">
+        <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <div class="flex items-center" data-aos="fade-down">
-            <img src="logo 1.png" alt="Logo" class="w-[300px] h-[30px]">
+            <img src="assests/logo 1.png" alt="Logo" class="w-[300px] h-[30px]">
           </div>
         </div>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-center space-x-8">
             <a href="#home" class="text-white hover:text-primary px-3 py-2 text-sm font-medium glow-hover"
@@ -43,9 +48,12 @@
               data-aos="fade-down" data-aos-delay="300">Contact</a>
           </div>
         </div>
+
+        <!-- Mobile Menu Button (unchanged classes) -->
         <div class="md:hidden">
           <button
-            class="mobile-menu-button p-2 rounded-md text-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+            class="mobile-menu-button p-2 rounded-md text-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+            aria-controls="mobile-menu" aria-expanded="false">
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -56,9 +64,8 @@
     </div>
   </nav>
 
-
   <!-- Mobile menu -->
-  <div class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 z-50
+  <div id="mobile-menu" class="hidden md:hidden fixed top-24 left-0 right-0 z-50
          bg-lightdark/95 backdrop-blur shadow-lg border-t border-white/10
          transition-all duration-300">
     <div class="px-4 pt-3 pb-4 space-y-1">
@@ -82,10 +89,13 @@
         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800 hover:text-primary">
         Contact
       </a>
-      <button
-        class="w-full bg-primary hover:bg-green-700 text-black px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">
-        Get Started
-      </button>
+      <a href="#contact">
+        <button
+          class="w-full bg-primary hover:bg-green-700 text-black px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">
+          Get Started
+        </button>
+      </a>
+
     </div>
   </div>
 
@@ -125,7 +135,7 @@
         <!-- Image -->
         <div class="w-full max-w-[475px] mx-auto">
           <div class="relative mt-8 md:mt-0" data-aos="fade-left" data-aos-delay="400">
-            <img src="main page pic.jpeg" alt="Modern workspace with developers collaborating"
+            <img src="assests/main page pic.jpeg" alt="Modern workspace with developers collaborating"
               class="rounded-xl shadow-2xl floating w-full" />
           </div>
         </div>
@@ -243,25 +253,20 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Project Card Template -->
-
+        <!-- Food Hub -->
         <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
-
+          class="project-card bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
           <img src="assests/pic_1.png" alt="The Food Hub Restaurant Website" class="w-full h-48 object-cover">
-
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2 text-primary">The Food Hub</h3>
             <p class="text-gray-300 mb-4">
               A modern and interactive restaurant website that showcases frontend creativity with a pixel-perfect UI.
             </p>
-
             <!-- Hidden Details -->
-            <div id="foodHubDetails" class="hidden">
+            <div class="details-section hidden">
               <p class="text-gray-300 mb-4">
                 Built entirely with clean HTML, CSS, and JavaScript, featuring custom animations, responsive layouts,
-                and
-                optimized performance for a seamless user experience.
+                and optimized performance for a seamless user experience.
               </p>
               <ul class="text-gray-400 mb-4 list-disc list-inside text-sm">
                 <li>💻 HTML, CSS, JavaScript frontend development</li>
@@ -270,85 +275,116 @@
                 <li>🚀 SEO-friendly & fast-loading</li>
               </ul>
             </div>
-
             <!-- Buttons -->
             <div class="flex items-center justify-between mt-4">
-              <button onclick="toggleFoodHub()"
-                class="text-orange-500 hover:text-orange-400 font-medium focus:outline-none">
-                Show More
-              </button>
+              <button class="toggle-btn text-orange-500 hover:text-orange-400 font-medium focus:outline-none">Show
+                More</button>
               <a href="assests/food_hub_vid.mp4" target="_blank"
-                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">
-                View Project
-              </a>
+                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">View Project</a>
             </div>
           </div>
         </div>
 
+        <!-- Portfolio -->
         <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="ad.png" alt="Portfolio Website" class="w-full h-48 object-cover">
+          class="project-card bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
+          <img src="assests/ad.png" alt="Portfolio Website Preview" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-primary">Portfolio Website</h3>
-            <p class="text-gray-300 mb-4">A personal brand site to showcase your work, skills, and resume with style.
+            <h3 class="text-xl font-bold mb-2 text-primary">Portfolio</h3>
+            <p class="text-gray-300 mb-4">
+              An interactive project portfolio designed to present work professionally and attract potential clients.
             </p>
-            <a href="https://adarshkumar.vercel.app/" target="_blank"
-              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+            <!-- Hidden Details -->
+            <div class="details-section hidden">
+              <p class="text-gray-300 mb-4">
+                Built with React.js, HTML, CSS, and JavaScript, featuring smooth animations, a fully responsive design,
+                and optimized performance for an outstanding user experience.
+              </p>
+              <ul class="text-gray-400 mb-4 list-disc list-inside text-sm">
+                <li>⚛️ React.js for dynamic UI</li>
+                <li>🎨 Custom animations & modern UI/UX</li>
+                <li>📱 Fully responsive design</li>
+                <li>🚀 Optimized for speed & SEO</li>
+              </ul>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center justify-between mt-4">
+              <button class="toggle-btn text-orange-500 hover:text-orange-400 font-medium focus:outline-none">Show
+                More</button>
+              <a href="assests/portfolio.mp4" target="_blank"
+                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">View Project</a>
+            </div>
           </div>
         </div>
 
-        <!-- Repeat below cards and replace details -->
+        <!-- WheelWise (full stack) -->
         <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="https://via.placeholder.com/400x200" alt="Personal Blog" class="w-full h-48 object-cover">
+          class="project-card bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
+          <img src="assests/wheelwise.png" alt="Personal Blog" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-primary">Personal Blog</h3>
-            <p class="text-gray-300 mb-4">Share your thoughts and experiences online with a clean, easy-to-manage blog
-              platform.</p>
-            <a href="#" target="_blank"
-              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
-          </div>
-        </div>
-
-        <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="https://via.placeholder.com/400x200" alt="Web Scraping Tool" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-primary">Web Scraping Tool</h3>
-            <p class="text-gray-300 mb-4">Automate data collection from websites using tools like Python and
-              BeautifulSoup.</p>
-            <a href="#" target="_blank"
-              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
-          </div>
-        </div>
-
-        <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="https://via.placeholder.com/400x200" alt="Data Visualization Project"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-primary">Data Visualization Project</h3>
-            <p class="text-gray-300 mb-4">Interactive charts and dashboards to help visualize data and find insights.
+            <h3 class="text-xl font-bold mb-2 text-primary">WheelWise (Full Stack)</h3>
+            <p class="text-gray-300 mb-4">
+              WheelWise is a car and bike rental website built using HTML, CSS, JavaScript, PHP and MySQL enabling users
+              to book vehicles.
             </p>
-            <a href="#" target="_blank"
-              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+            <!-- Hidden Details -->
+            <div class="details-section hidden">
+              <p class="text-gray-300 mb-4">
+                The WheelWise Admin Panel, built with PHP and MySQL, allows administrators to manage vehicles, bookings,
+                and users efficiently.
+              </p>
+              <ul class="text-gray-400 mb-4 list-disc list-inside text-sm">
+                <li>🚗 Easy vehicle booking</li>
+                <li>👤 User authentication & management</li>
+                <li>🛠️ Admin panel for vehicles and bookings</li>
+                <li>📱 Fully responsive design</li>
+              </ul>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center justify-between mt-4">
+              <button class="toggle-btn text-orange-500 hover:text-orange-400 font-medium focus:outline-none">Show
+                More</button>
+              <a href="assests/wheelwise.mp4" target="_blank"
+                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">View Project</a>
+            </div>
           </div>
         </div>
 
+        <!-- UI / UX -->
         <div
-          class="bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all">
-          <img src="https://via.placeholder.com/400x200" alt="Online Voting System" class="w-full h-48 object-cover">
+          class="project-card bg-[#1a1a1a] rounded-lg overflow-hidden border border-transparent hover:border-orange-500 transition-all hover:shadow-lg hover:shadow-orange-500/20">
+          <img src="assests/u1.jpg" alt="Personal Blog" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-primary">Online Voting System</h3>
-            <p class="text-gray-300 mb-4">A secure voting platform with login and result calculation for institutions or
-              events.</p>
-            <a href="#" target="_blank"
-              class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">Visit</a>
+            <h3 class="text-xl font-bold mb-2 text-primary">UI / UX Projects</h3>
+            <p class="text-gray-300 mb-4">
+              Designed and developed user-friendly web applications with clean interfaces, seamless navigation, and
+              engaging user experiences.
+            </p>
+            <!-- Hidden Details -->
+            <div class="details-section hidden">
+              <p class="text-gray-300 mb-4">
+                Designed modern UI with pixel-perfect layouts and responsive elements. Enhanced UX by focusing on
+                intuitive navigation and smooth user journeys.
+              </p>
+              <ul class="text-gray-400 mb-4 list-disc list-inside text-sm">
+                <li>🎨 Intuitive and user-friendly booking flow</li>
+                <li>🔒 Seamless login and user management experience</li>
+                <li>🛠️ Simplified admin dashboard with smooth interactions</li>
+                <li>📱 Fully responsive and mobile-first UI design</li>
+              </ul>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center justify-between mt-4">
+              <button class="toggle-btn text-orange-500 hover:text-orange-400 font-medium focus:outline-none">Show
+                More</button>
+              <a href="https://drive.google.com/drive/folders/1DM05mb-Bc4SSPL3X5JctPEod_Mr5CkTE?usp=sharing"
+                target="_blank"
+                class="text-white bg-primary hover:bg-green-700 px-4 py-2 rounded text-sm font-medium">View Project</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
   </section>
+
 
 
   <!-- Student Projects Section -->
