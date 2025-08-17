@@ -22,6 +22,8 @@
 </head>
 
 <body class="bg-dark">
+
+
   <!-- Navigation -->
   <nav class="bg-[#000000] fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,16 +101,15 @@
     </div>
   </div>
 
+
   <!-- Hero Section -->
-  <section id="home" class="hero-pattern py-12 md:py-20 overflow-hidden">
+  <section id="home" class="hero-pattern py-20 md:py-28 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         <!-- Text Content -->
-        <div>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6"
-            data-aos="fade-up">
-
+        <div class="mt-4 md:mt-0">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
             <span class="gradient-text block break-words sm:whitespace-normal">
               Transforming Businesses
             </span>
@@ -116,14 +117,12 @@
               With <span class="neon-text">Cutting-Edge</span> Technology
             </span>
           </h1>
-
-          <p class="text-gray-300 mb-8 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-gray-300 mb-8 max-w-lg">
             We deliver innovative digital solutions that drive growth, enhance efficiency, and create exceptional user
-            experiences for businesses of all sizes.
+            experiences.
           </p>
-
-          <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="#services" class="inline-block">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#services">
               <button
                 class="bg-primary hover:bg-green-700 text-black px-6 py-3 rounded-md text-base font-medium transition-all duration-300 hover:scale-105">
                 Explore Services
@@ -132,16 +131,17 @@
           </div>
         </div>
 
-        <!-- Image -->
-        <div class="w-full max-w-[475px] mx-auto">
-          <div class="relative mt-8 md:mt-0" data-aos="fade-left" data-aos-delay="400">
-            <img src="assests/main page pic.jpeg" alt="Modern workspace with developers collaborating"
-              class="rounded-xl shadow-2xl floating w-full" />
-          </div>
+        <!-- Right Side Image -->
+        <div class="w-full max-w-[450px] mx-auto relative animate-float">
+          <img src="assests/home_page.gif" alt="Hero Image"
+            class="w-full h-auto rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50">
         </div>
+
       </div>
     </div>
   </section>
+
+
 
 
   <!-- SERVICES SECTION -->
@@ -688,9 +688,23 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
   </a>
 
+
   <!-- External Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+
+  <!-- OrbitControls (needs Three.js first) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- GSAP (for animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+  <!-- Your globe script -->
+  <script src="global.js"></script>
+
 </body>
 
 </html>
